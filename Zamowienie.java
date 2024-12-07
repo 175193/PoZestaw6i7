@@ -35,4 +35,33 @@ public class Zamowienie {
     public void setPlatnosc(Platnosc platnosc) {
         this.platnosc = platnosc;
     }
+
+    public void setKoszyk(KoszykZakupowy koszyk) {
+        this.koszyk = koszyk;
+    }
+
+    public String getStatusZamowienia() {
+        return statusZamowienia;
+    }
+
+    public void setStatusZamowienia(String statusZamowienia) {
+        if (statusZamowienia != null) {
+            this.statusZamowienia = statusZamowienia;
+        } else {
+            throw new IllegalArgumentException("Status zamowienia nie może być nullem");
+        }
+    }
+
+    public Platnosc getPlatnosc() {
+        return platnosc;
+    }
+
+    @Override
+    public String toString() {
+        return "Zamowienie{" +
+                "koszyk=" + koszyk +
+                ", statusZamowienia='" + statusZamowienia + '\'' +
+                ", platnosc=" + platnosc +
+                '}';
+    }
 }
